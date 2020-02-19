@@ -1,0 +1,14 @@
+package platoon.protocol;
+
+struct PlatoonManagerInfo {
+    // ego vehicle desire drive mode;
+    int8_t                  desire_drive_mode;
+
+    VehicleInfo             leader_vehicle;
+
+    VehicleInfo             frenet_vehicle;
+
+    double                  leader_frenet_dis;
+
+    double                  front_frenet_dis;
+}

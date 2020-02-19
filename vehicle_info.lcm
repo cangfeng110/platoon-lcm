@@ -1,0 +1,57 @@
+package platoon.protocol;
+
+struct VehicleInfo
+{
+	HEADER header;
+
+	//vehicle parements         
+	int32_t  vehicle_id;
+
+	float    vehicle_length;
+
+	float    vehicle_width;  
+
+	float 	 vehicle_height;
+
+    //vechile drive mode:
+	// 0: manual drive
+	// 1: single driveless drive
+	// 2: platoon driveless drive
+	int8_t 	 actual_drive_mode;
+
+	int8_t   	 desire_drive_mode;
+
+	// GPS info 
+	double   longitude;   // degree
+	
+	double   latitude;    // degree
+	
+	float    altitude;    // m
+
+	float    heading;     // rad, Counterclockwise,  north is 0
+
+  	int8_t   gps_status;    //
+
+	int64_t  gps_time;     //
+
+	//Relative information in ego vehicle coordinate system
+	double   relative_x;
+
+    double   relative_y;
+
+	double   relative_heading;
+
+	//Kinematic information
+	float    longtitude_acc;   // m/s2
+
+	float    lateral_acc;   // m/s2
+
+	float    speed;        // m/s
+  
+	float    steering_wheel_angle; //rad
+
+	float    yaw_rate;       //rad/s
+
+	//Control information
+	float    desire_long_acc;   //m/s2
+}
