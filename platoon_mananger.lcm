@@ -6,9 +6,12 @@ struct PlatoonManagerInfo {
 
     VehicleInfo             leader_vehicle;
 
-    VehicleInfo             frenet_vehicle;
+    VehicleInfo             front_vehicle;
 
     double                  leader_frenet_dis;
 
     double                  front_frenet_dis;
+
+    /*the vehicle number betwen leader vehicle from ego vehicle*/
+    int8_t                  vehicle_num;
 }

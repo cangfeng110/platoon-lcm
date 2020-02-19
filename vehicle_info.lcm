@@ -13,13 +13,23 @@ struct VehicleInfo
 
 	float 	 vehicle_height;
 
-    //vechile drive mode:
-	// 0: manual drive
-	// 1: single driveless drive
-	// 2: platoon driveless drive
-	int8_t 	 actual_drive_mode;
-
+    /*vechile drive mode:
+	 0: manual drive mode
+	 1: single driveless drive mode
+	 2: leader mode
+	 3：platoon formation mode
+	 4: platoon keep mode
+	 5: platoon leaving mode
+	 6: not normal mode
+	 7: invaild
+	*/
 	int8_t   	 desire_drive_mode;
+
+	//vehicle states , from planning
+
+	int8_t 	 	 actual_drive_mode;
+
+	boolean      cut_in_flag;
 
 	// GPS info 
 	double   longitude;   // degree
@@ -30,7 +40,7 @@ struct VehicleInfo
 
 	float    heading;     // rad, Counterclockwise,  north is 0
 
-  	int8_t   gps_status;    //
+  	int8_t   gps_status;    // 
 
 	int64_t  gps_time;     //
 
@@ -52,6 +62,6 @@ struct VehicleInfo
 
 	float    yaw_rate;       //rad/s
 
-	//Control information
+	//Control information,from planning
 	float    desire_long_acc;   //m/s2
 }
