@@ -1,0 +1,12 @@
+package platoon.protocol;
+struct FmsInfo {
+    /* 0: invaild
+       1: leader
+       2: enquene
+       3: dequene
+       4: disband
+    */
+    int8_t fms_order;
+    // if fms_order == 0, leader speed valid
+    float leader_speed;
+}

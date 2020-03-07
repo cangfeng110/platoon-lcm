@@ -1,0 +1,9 @@
+package platoon.protocol;
+
+struct EgoPlanningMsg
+{
+    platoon.protocol.HEADER PlanningHeader;
+    double  expire_acc;
+    int8_t  actual_drive_mode;
+    boolean cut_in;
+}
