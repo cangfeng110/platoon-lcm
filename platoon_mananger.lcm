@@ -3,15 +3,20 @@ package platoon.protocol;
 struct PlatoonManagerInfo {
     // ego vehicle desire drive mode;
     int8_t                  desire_drive_mode;
+    
+    int8_t                  platoon_number;
 
-    VehicleInfo             leader_vehicle;
+    int8_t                  vehicle_sequence;
 
-    VehicleInfo             front_vehicle;
+    int8_t                  vehicle_num;
 
     double                  leader_frenet_dis;
 
     double                  front_frenet_dis;
+    
+    VehicleInfo             leader_vehicle;
 
-    /*the vehicle number betwen leader vehicle from ego vehicle*/
-    int8_t                  vehicle_num;
+    VehicleInfo             front_vehicle;
+
+    int8_t                  vehicle_communication_status[vehicle_num];
 }
