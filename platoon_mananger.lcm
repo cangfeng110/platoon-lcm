@@ -19,4 +19,6 @@ struct PlatoonManagerInfo {
     VehicleInfo             front_vehicle;
 
     int8_t                  vehicle_communication_status[vehicle_num];
+
+    float 		    safe_distance;
 }

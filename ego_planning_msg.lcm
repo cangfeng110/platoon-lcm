@@ -6,4 +6,6 @@ struct EgoPlanningMsg
     double  expire_acc;
     int8_t  actual_drive_mode;
     boolean cut_in;
+    double cut_in_time;
+    double front_obstacle_distance;
 }

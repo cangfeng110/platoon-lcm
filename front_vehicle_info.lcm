@@ -1,0 +1,72 @@
+package platoon.protocol;
+
+struct FrontVehicle
+{
+
+	//vehicle parements         
+	int32_t  vehicle_id;
+
+	float    vehicle_length;
+
+	float    vehicle_width;  
+
+	float 	 vehicle_height;
+
+    /*vechile drive mode:
+	 0: manual drive mode
+	 1: single driveless drive mode
+	 2: leader mode
+	 3：platoon formation mode
+	 4: platoon keep mode
+	 5: platoon leaving mode
+	 6: communication abnormal
+	 7: cut in abnormal
+	 255: invaild
+	*/
+	int8_t   	 desire_drive_mode;
+
+	//vehicle states , from planning
+
+	int8_t 	 	 actual_drive_mode;
+
+	boolean      cut_in_flag;
+
+    // vehicle sequence in the platoon
+	int8_t    	vehicle_sequence;
+
+	int8_t 		platoon_number;
+
+	// GPS info 
+	int8_t   	gps_status;
+
+	double   longitude;   // degree
+	
+	double   latitude;    // degree
+	
+	float    altitude;    // m
+
+	float    heading;     // rad, Counterclockwise,  north is 0
+
+	double  gps_time;     //
+
+	//Relative information in ego vehicle coordinate system
+	double   relative_x;
+
+    double   relative_y;
+
+	double   relative_heading;
+
+	//Kinematic information
+	float    longtitude_acc;   // m/s2
+
+	float    lateral_acc;   // m/s2
+
+	float    speed;        // m/s
+  
+	float    steering_wheel_angle; //rad
+
+	float    yaw_rate;       //rad/s
+
+	//Control information,from planning
+	float    desire_long_acc;   //m/s2
+}

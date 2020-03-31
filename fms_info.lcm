@@ -9,4 +9,6 @@ struct FmsInfo {
     int8_t fms_order;
     // if fms_order == 0, leader speed valid
     float leader_speed;
+
+    float safe_distance;
 }
