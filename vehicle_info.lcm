@@ -69,4 +69,6 @@ struct VehicleInfo
 
 	//Control information,from planning
 	float    desire_long_acc;   //m/s2
+
+	float    safedistance;
 }
